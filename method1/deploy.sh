@@ -1,56 +1,73 @@
-#!/bin/bash
-if [ "$1" == "docker" ]; then
-    git clone https://github.com/TekspotEdu/microserviceapp.git
-    bash docker_install
+if [ "$1" == "--help" ]; then
+    echo "Usage: example_script.sh [options] [argument]
 
-    case $2 in
-        "demo-frontend")
-            cd /home/ubuntu/microserviceapp/demo-frontend/
-            sudo docker build -t demo-frontend/img:1.0.0 . -f Dockerfile
-            sudo docker run -d demo-frontend/img:1.0.0
-            ;;
-        "demo-backend1")
-            cd /home/ubuntu/microserviceapp/demo-backend1/
-            sudo docker build -t demo-backend1/img:1.0.0 . -f Dockerfile
-            sudo docker run -d demo-backend1/img:1.0.0
-            ;;
-        "demo-backend2")
-            cd /home/ubuntu/microserviceapp/demo-backend2/
-            sudo docker build -t demo-backend2/img:1.0.0 . -f Dockerfile
-            sudo docker run -d demo-backend2/img:1.0.0
-            ;;
-        *)
-            echo "Enter a valid service name from the options provided."
-            ;;
-    esac
+Options:
+  -h, --help       Display this help message
+
+Description:
+This script facilitates the installation of microservices on either Docker containers or AWS instances based on the provided parameters.
+"
+exit 0
+fi
+
+##############
+
+if [[ "$1" == "container" ]]; then
+
+#installing docker
+bash  docker_package.sh
+git clone https://github.com/TekspotEdu/microserviceapp.git
+
+case $2 in
+
+        "react")
+                cd microserviceapp/demo-frontend
+                sudo docker build -t docker_frontendimg . -f Dockerfile
+                sudo docker run -d docker_frontendimg
+        ;;
+
+        "java")
+                cd microserviceapp/demo-backend1
+                sudo docker build -t docker_backend1img . -f Dockerfile
+                sudo docker run docker_backend1img
+        ;;
+
+        "python")
+                cd microserviceapp/demo-backend2
+                sudo docker build -t docker_backend2img . -f Dockerfile
+                sudo docker run docker_backend2img
+
+        ;;
+esac
+
 else
-    git clone https://github.com/TekspotEdu/microserviceapp.git
-    case $2 in
-        "demo-frontend")
-            cd /home/ubuntu/microserviceapp/demo-frontend/
-            ssh ubuntu@$3 "sudo apt-get update && sudo apt-get install -y nginx"
-            ssh ubuntu@$3 "sudo service nginx start"
-            ssh ubuntu@$3 "sudo chown -R ubuntu /var/www/html"
-            sudo scp index.html ubuntu@$3:var/www/html
-            ;;
-        "demo-backend1")
-            cd /home/ubuntu/microserviceapp/demo-backend1/
-            ssh ubuntu@$3 "sudo apt-get update && sudo apt-get install -y openjdk-11-jdk"
-            ssh ubuntu@$3 "sudo apt-get update && sudo apt-get install -y maven"
-            ssh ubuntu@$3 "sudo mvn install"
-            cd target/
-            ssh ubuntu@$3 "java -jar sentiment-analysis-web-0.0.2-SNAPSHOT.jar --sa.logic.api.url http://localhost:5000"
-            ;;
-        "demo-backend2")
-            cd /home/ubuntu/microserviceapp/demo-backend2/
-            ssh ubuntu@$3 "sudo apt-get update && sudo apt-get install -y python3"
-            ssh ubuntu@$3 "sudo apt-get update && sudo apt-get install -y python3-pip"
-            cd sa/
-            ssh ubuntu@$3 "sudo pip3 install -r requirements.txt"
-            ssh ubuntu@$3 "python3 sentiment_analysis.py"
-            ;;
-        *)
-            echo "Enter a valid service name from the options provided."
-            ;;
-    esac
+
+
+case $2 in
+
+        "react")
+                ssh ubuntu@$3 "sudo git clone "https://github.com/TekspotEdu/microserviceapp.git" "
+                ssh ubuntu@$3 "sudo apt-get update && sudo apt-get install -y nginx"
+                ssh ubuntu@$3 "sudo service nginx start"
+                ssh ubuntu@$3 "sudo chown -R ubuntu /var/www/html"
+                scp microserviceapp/demo-frontend/build/index.html ubuntu@$3:/var/www/html/
+
+
+        ;;
+
+        "java")
+                ssh ubuntu@$3 "sudo apt-get update && sudo apt-get install -y openjdk-11-jdk"
+                ssh ubuntu@$3 "sudo git clone "https://github.com/TekspotEdu/microserviceapp.git" "
+                ssh ubuntu@$3 "cd microserviceapp/demo-backend1/target/ && sudo java -jar sentiment-analysis-web-0.0.2-SNAPSHOT.jar --sa.logic.api.url http://$3:5000"
+
+
+        ;;
+
+        "python")
+                ssh ubuntu@$3 "sudo apt-get update && sudo apt-get install -y python3"
+                ssh ubuntu@$3 "sudo apt-get update && sudo apt-get install -y python3-pip"
+                ssh ubuntu@$3 "sudo git clone "https://github.com/TekspotEdu/microserviceapp.git" "
+                ssh ubuntu@$3 "cd microserviceapp/demo-backend2/sa/ && sudo pip3 install -r requirements.txt && sudo python3 sentiment_analysis.py"
+        ;;
+esac
 fi
