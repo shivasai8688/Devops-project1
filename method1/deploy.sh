@@ -1,3 +1,4 @@
+#!/bin/bash
 if [ "$1" == "docker" ]; then
     git clone https://github.com/TekspotEdu/microserviceapp.git
     bash docker_install
