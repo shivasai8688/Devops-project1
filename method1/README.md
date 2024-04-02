@@ -10,9 +10,9 @@ To use the script, follow the instructions below: <br>
 git clone https://github.com/shivasai8688/devops_project1.git
 
 ## This command navigates to correct directory path of the file 
-
+```
 cd microserviceapp/method1/
-
+```
 
 ## • FOR DEPLOYING IN CONTAINER <br>
 
