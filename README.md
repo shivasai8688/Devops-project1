@@ -19,13 +19,13 @@ AWS Deployment:
 If AWS is chosen as the deployment platform, the script assumes SSH access to the target AWS instance. The steps include:
 -Clones the microservice repository from GitHub on the remote AWS instance.
 -Installs necessary dependencies.
-•	Configures and runs the selected microservice.
+-Configures and runs the selected microservice.
 
 Services:
 The script supports the installation of the following microservices:
-•	React: Installs the React frontend.
-•	Java: Installs the Java backend.
-•	Python: Installs the Python backend.
+-React: Installs the React frontend.
+-Java: Installs the Java backend.
+-Python: Installs the Python backend.
 
 Usage Examples:
 Docker Deployment:
@@ -40,7 +40,7 @@ AWS Deployment:
 Replace <ip_address> with the actual IP address of the AWS instance.
 
 Note:
-• Ensure Docker is installed on the host system for Docker deployment.
-• For AWS deployment, SSH access to the target instance is required.
-• The script assumes the availability of necessary dependencies and configurations for each
+-Ensure Docker is installed on the host system for Docker deployment.
+-For AWS deployment, SSH access to the target instance is required.
+-The script assumes the availability of necessary dependencies and configurations for each
    microservice
