@@ -6,12 +6,12 @@ To use the script, follow the instructions below: <br>
 
 1)clone the code by running below command
 
-git clone https://github.com/kadagotiprudhvi/microservices.git
+git clone https://github.com/shivasai8688/microserviceapp.git
 
 
 2)This command navigates to correct directory path of the file <br>
   
-cd microservices/method2/
+cd microserviceapp/method2/
 
 
 3)This command runs the script and deploys the service <br>
