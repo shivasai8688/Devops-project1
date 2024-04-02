@@ -18,33 +18,33 @@ cd devops_project1/method1/
 
 Use this command for deploying react service
 ``` 
-$ bash root.sh container react
+bash root.sh container react
 ```
 
 Use this command for deploying java service
 ``` 
-$ bash root.sh container java
+bash root.sh container java
 ```
 
 Use this command for deploying python service
 ``` 
-$ bash root.sh container python
+bash root.sh container python
 ```
 
 ## • FOR DEPLOYING IN AWS
  
 Use this command for deploying react service <br>
-``` 
-  $ bash deploy.sh aws react <0.0.0.0> (change ip_adress as required)
+```
+bash deploy.sh aws react <0.0.0.0> (change ip_adress as required)
 ```
 Use this command for deploying java service    
 ```
-  $ bash deploy.sh aws java <0.0.0.0> (change ip_adress as required)
+bash deploy.sh aws java <0.0.0.0> (change ip_adress as required)
 ```
 
 Use this command for deploying python service    
 ```
-  $ bash deploy.sh aws python <0.0.0.0> (change ip_adress as required)
+bash deploy.sh aws python <0.0.0.0> (change ip_adress as required)
 ```
 
 type the command bash root.sh --help for details.
