@@ -7,7 +7,7 @@ To use the script, follow the instructions below: <br>
 
 ## clone the code by running below command
 
-git clone https://github.com/shivasai8688/microserviceapp.git
+git clone https://github.com/shivasai8688/devops_project1.git
 
 ## This command navigates to correct directory path of the file 
 
