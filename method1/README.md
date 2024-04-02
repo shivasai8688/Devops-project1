@@ -14,7 +14,7 @@ git clone https://github.com/shivasai8688/devops_project1.git
 cd microserviceapp/method1/
 ```
 
-## • FOR DEPLOYING IN CONTAINER <br>
+## • FOR DEPLOYING IN CONTAINER
 
 Use this command for deploying react service
  ``` 
@@ -31,7 +31,7 @@ Use this command for deploying python service
 $ bash root.sh container python
 ```
 
-## • FOR DEPLOYING IN AWS <br>
+## • FOR DEPLOYING IN AWS
  
 Use this command for deploying demo-frontend service <br>
  ``` 
