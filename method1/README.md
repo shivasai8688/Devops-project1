@@ -18,17 +18,17 @@ cd devops_project1/method1/
 
 Use this command for deploying react service
 ``` 
-bash root.sh container react
+bash deploy.sh container react
 ```
 
 Use this command for deploying java service
 ``` 
-bash root.sh container java
+bash deploy.sh container java
 ```
 
 Use this command for deploying python service
 ``` 
-bash root.sh container python
+bash deploy.sh container python
 ```
 
 ## • FOR DEPLOYING IN AWS
