@@ -1,44 +1,34 @@
-Microservice Installation Script
+## Microservice Installation Script<br>
+## This script facilitates the installation of microservices on either Docker containers or AWS instances based on the provided parameters.<br>
 
-This script facilitates the installation of microservices either on Docker containers or AWS instances based on the user input.
+## Usage
+To use the script, follow the instructions below: <br>
 
-Usage
-bash
-./deploy.sh
+1)clone the code by running below command
 
-Options
--h, --help: Display help message.
+git clone https://github.com/kadagotiprudhvi/microservices.git
 
-Description:
-This script prompts the user to select a platform (aws or container) and a service (react, java, or python). Based on the provided selections, it installs the corresponding microservice.
 
-Prerequisites:
-Docker (if deploying on containers)
-SSH access to the target AWS instance (if deploying on AWS)
-Installation:
-Clone this repository:
-bash
-git clone https://github.com/TekspotEdu/microserviceapp.git
-cd microserviceapp
-Run the installation script:
-bash
-./deploy.sh
+2)This command navigates to correct directory path of the file <br>
+  
+cd microservices/method2/
 
-Follow the prompts to select the platform and service.
-Platforms
-AWS:
-If aws is selected as the platform, the script will prompt for the IP address of the AWS instance.
-The selected microservice will be installed remotely on the AWS instance using SSH.
 
-Container:
-If container is selected as the platform, the script will execute Docker commands locally to build and run the selected microservice.
-Services
+3)This command runs the script and deploys the service <br>
+  
+bash script.sh
 
-React: Installs the React frontend.
-Java: Installs the Java backend.
-Python: Installs the Python backend.
 
-Note
-Ensure Docker is installed and configured properly if deploying on containers.
-Make sure to have SSH access to the AWS instance and provide the correct IP address when prompted for AWS deployment.
-The script assumes that necessary dependencies for each microservice are already installed on the target system.
+After running the above command enter the inputs with appropriate parameters as below mentioned <br>
+
+Enter the input environtment to install the microservices <br>
+   •container <br>
+   •aws <br>
+
+Enter the input microservice_name to install <br>
+   •react <br>
+   •java <br>
+   •python <br>
+
+If you select aws it asks you to enter ip address <br>
+   •Ip_address
