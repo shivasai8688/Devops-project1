@@ -11,7 +11,7 @@ git clone https://github.com/shivasai8688/devops_project1.git
 
 2)This command navigates to correct directory path of the file <br>
 ```  
-cd microserviceapp/method2/
+cd devops_project1/method2/
 ```
 
 3)This command runs the script and deploys the service <br>
