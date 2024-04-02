@@ -7,11 +7,11 @@ To use the script, follow the instructions below: <br>
 
 ## clone the code by running below command
 
-git clone https://github.com/kadagotiprudhvi/microservices.git
+git clone https://github.com/shivasai8688/microserviceapp.git
 
 ## This command navigates to correct directory path of the file 
 
-cd microservices/method1/
+cd microserviceapp/method1/
 
 
 ## • FOR DEPLOYING IN CONTAINER <br>
