@@ -1,4 +1,4 @@
-# Microservice Installation Script <br>
+# Microservice Installation Script
 
 This script facilitates the installation of microservices on either Docker containers or AWS instances based on the provided parameters.
 
