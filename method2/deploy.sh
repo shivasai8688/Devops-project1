@@ -37,19 +37,19 @@ case $service in
 "react")
         cd microserviceapp/demo-frontend
         sudo docker build -t docker_frontendimg . -f Dockerfile
-        sudo docker run docker_frontendimg
+        sudo docker run -d docker_frontendimg
 ;;
 
 "java")
         cd microserviceapp/demo-backend1
         sudo docker build -t docker_backend1img . -f Dockerfile
-        sudo docker run docker_backend1img
+        sudo docker run -d docker_backend1img
 ;;
 
 "python")
         cd microserviceapp/demo-backend2
         sudo docker build -t docker_backend2img . -f Dockerfile
-        sudo docker run docker_backend2img
+        sudo docker run -d docker_backend2img
 
 ;;
 esac
