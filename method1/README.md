@@ -11,7 +11,7 @@ git clone https://github.com/shivasai8688/devops_project1.git
 ```
 ## This command navigates to correct directory path of the file 
 ```
-cd microserviceapp/method1/
+cd devops_project1/method1/
 ```
 
 ## • FOR DEPLOYING IN CONTAINER
@@ -35,16 +35,16 @@ $ bash root.sh container python
  
 Use this command for deploying demo-frontend service <br>
 ``` 
-  $ bash root.sh aws demo-frontend <0.0.0.0> (change ip_adress as required)
+  $ bash root.sh aws react <0.0.0.0> (change ip_adress as required)
 ```
 Use this command for deploying demo-backend1 service    
 ```
-  $ bash root.sh aws demo-backend1 <0.0.0.0> (change ip_adress as required)
+  $ bash root.sh aws java <0.0.0.0> (change ip_adress as required)
 ```
 
 Use this command for deploying demo-backend2 service    
 ```
-  $ bash root.sh aws demo-backend2 <0.0.0.0> (change ip_adress as required)
+  $ bash root.sh aws python <0.0.0.0> (change ip_adress as required)
 ```
 
 type the command bash root.sh --help for details.
