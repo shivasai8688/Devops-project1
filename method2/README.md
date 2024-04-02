@@ -9,13 +9,13 @@ bash
 Options
 -h, --help: Display help message.
 
-Description
+Description:
 This script prompts the user to select a platform (aws or container) and a service (react, java, or python). Based on the provided selections, it installs the corresponding microservice.
 
-Prerequisites
+Prerequisites:
 Docker (if deploying on containers)
 SSH access to the target AWS instance (if deploying on AWS)
-Installation
+Installation:
 Clone this repository:
 bash
 git clone https://github.com/TekspotEdu/microserviceapp.git
