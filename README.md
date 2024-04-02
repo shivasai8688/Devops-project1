@@ -11,14 +11,14 @@ This script automates the installation process of microservices. Users can choos
 
 Docker Deployment:
 If Docker is chosen as the deployment platform (container), the script performs the following steps:
-•	Installs Docker by executing the docker_package.sh script.
-•	Clones the microservice repository from GitHub.
-•	Builds and runs the selected microservice Docker image.
+-Installs Docker by executing the docker_package.sh script.
+-Clones the microservice repository from GitHub.
+-Builds and runs the selected microservice Docker image.
 
 AWS Deployment:
 If AWS is chosen as the deployment platform, the script assumes SSH access to the target AWS instance. The steps include:
-•	Clones the microservice repository from GitHub on the remote AWS instance.
-•	Installs necessary dependencies.
+-Clones the microservice repository from GitHub on the remote AWS instance.
+-Installs necessary dependencies.
 •	Configures and runs the selected microservice.
 
 Services:
