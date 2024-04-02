@@ -17,24 +17,24 @@ cd microserviceapp/method1/
 ## • FOR DEPLOYING IN CONTAINER
 
 Use this command for deploying react service
- ``` 
-  $ bash root.sh container react
+``` 
+$ bash root.sh container react
 ```
 
 Use this command for deploying java service
- ``` 
+``` 
 $ bash root.sh container java
 ```
 
 Use this command for deploying python service
- ``` 
+``` 
 $ bash root.sh container python
 ```
 
 ## • FOR DEPLOYING IN AWS
  
 Use this command for deploying demo-frontend service <br>
- ``` 
+``` 
   $ bash root.sh aws demo-frontend <0.0.0.0> (change ip_adress as required)
 ```
 Use this command for deploying demo-backend1 service    
