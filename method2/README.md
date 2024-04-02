@@ -8,6 +8,7 @@ bash
 
 Options
 -h, --help: Display help message.
+
 Description
 This script prompts the user to select a platform (aws or container) and a service (react, java, or python). Based on the provided selections, it installs the corresponding microservice.
 
