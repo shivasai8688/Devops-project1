@@ -33,18 +33,18 @@ $ bash root.sh container python
 
 ## • FOR DEPLOYING IN AWS
  
-Use this command for deploying demo-frontend service <br>
+Use this command for deploying react service <br>
 ``` 
-  $ bash root.sh aws react <0.0.0.0> (change ip_adress as required)
+  $ bash deploy.sh aws react <0.0.0.0> (change ip_adress as required)
 ```
-Use this command for deploying demo-backend1 service    
+Use this command for deploying java service    
 ```
-  $ bash root.sh aws java <0.0.0.0> (change ip_adress as required)
+  $ bash deploy.sh aws java <0.0.0.0> (change ip_adress as required)
 ```
 
-Use this command for deploying demo-backend2 service    
+Use this command for deploying python service    
 ```
-  $ bash root.sh aws python <0.0.0.0> (change ip_adress as required)
+  $ bash deploy.sh aws python <0.0.0.0> (change ip_adress as required)
 ```
 
 type the command bash root.sh --help for details.
