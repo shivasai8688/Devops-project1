@@ -15,7 +15,7 @@ fi
 if [[ "$1" == "container" ]]; then
 
 #installing docker
-bash  docker_package.sh
+bash  dockerpackage.sh
 git clone https://github.com/TekspotEdu/microserviceapp.git
 
 case $2 in
