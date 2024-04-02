@@ -30,7 +30,7 @@ read service
 git clone https://github.com/TekspotEdu/microserviceapp.git
 
 if [ "$platform" == "container" ]; then
-bash docker_package.sh
+bash dockerpackage.sh
 
 case $service in
 
