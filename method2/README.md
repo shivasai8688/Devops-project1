@@ -5,19 +5,19 @@
 To use the script, follow the instructions below: <br>
 
 1)clone the code by running below command
-
+```
 git clone https://github.com/shivasai8688/devops_project1.git
-
+```
 
 2)This command navigates to correct directory path of the file <br>
-  
+```  
 cd microserviceapp/method2/
-
+```
 
 3)This command runs the script and deploys the service <br>
-  
-bash script.sh
-
+ ``` 
+bash deploy.sh
+```
 
 After running the above command enter the inputs with appropriate parameters as below mentioned <br>
 
