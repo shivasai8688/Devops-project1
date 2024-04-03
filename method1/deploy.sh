@@ -1,6 +1,6 @@
 !#bin/bash
 if [ "$1" == "--help" ]; then
-    echo "Usage: example_script.sh [options] [argument]
+    echo "Usage: deploy.sh [options] [argument]
 
 Options:
   -h, --help       Display this help message
